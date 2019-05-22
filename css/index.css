@@ -1,36 +1,30 @@
 @font-face {
-  font-family: 'Nunito Sans';
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Nunito ExtraLight'), local('Nunito-ExtraLight'), url(https://fonts.gstatic.com/s/nunito/v10/XRXW3I6Li01BKofA-seUYevN.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe0qMImSLYBIv1o4X1M8cce9I94.ttf) format('truetype');
+  src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v10/XRXV3I6Li01BKofINeaE.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Nunito Sans';
+  font-family: 'Nunito';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-display: swap;
-  src: local('Nunito Sans SemiBold'), local('NunitoSans-SemiBold'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe03MImSLYBIv1o4X1M8cc9iB85tU1Q.ttf) format('truetype');
+  src: local('Nunito Bold'), local('Nunito-Bold'), url(https://fonts.gstatic.com/s/nunito/v10/XRXW3I6Li01BKofAjsOUYevN.ttf) format('truetype');
 }
 @font-face {
-  font-family: Nunito Sans;
-  src: url('');
-}
-@font-regular {
-  font-family: 'Nunito Sans';
+  font-family: 'Nunito';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 800;
   font-display: swap;
-  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe0qMImSLYBIv1o4X1M8cce9I94.ttf) format('truetype');
-  font-size: 12px;
-}
-@font-sb {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local('Nunito Sans SemiBold'), local('NunitoSans-SemiBold'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe03MImSLYBIv1o4X1M8cc9iB85tU1Q.ttf) format('truetype');
-  font-size: 12px;
+  src: local('Nunito ExtraBold'), local('Nunito-ExtraBold'), url(https://fonts.gstatic.com/s/nunito/v10/XRXW3I6Li01BKofAksCUYevN.ttf) format('truetype');
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -337,54 +331,51 @@ template {
 [hidden] {
   display: none;
 }
-.site-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   color: white;
-  position: fixed;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
-@media (max-width:600px) {
-  .site-header {
-    flex-wrap: wrap;
-  }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
-.search-wrapper {
-  margin-left: 3%;
+body {
+  font-size: 1.2rem;
 }
-@media (max-width:600px) {
-  .search-wrapper {
-    display: none;
-  }
+body.is-preload *,
+body.is-preload *:before,
+body.is-preload *:after {
+  @include vendor('animation', 'none !important');
+  @include vendor('transition', 'none !important');
 }
-.logo {
-  text-decoration: none;
-  color: white;
-  padding: 3%;
+body.is-resizing *,
+body.is-resizing *:before,
+body.is-resizing *:after {
+  @include vendor('animation', 'none !important');
+  @include vendor('transition', 'none !important');
 }
-.site-nav {
-  margin-left: auto;
+#mainContent {
+  background-color: black;
 }
-@media (max-width:600px) {
-  .site-nav {
-    order: 2;
-    width: 100%;
-  }
+#mainContent section {
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5rem;
+  text-shadow: none;
+  color: #4d4d4d;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
-.site-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
+#mainContent section.hero {
   padding: 0;
 }
-.site-nav a {
-  text-decoration: none;
-  color: #CDD0D0;
-  padding: 20px;
-  display: inline-block;
-}
-#mainContent .hero .hero-wrapper .hero-background {
+#mainContent section.hero .hero-wrapper .hero-background {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/media/background.png);
   height: 100vh;
   width: 100%;
@@ -393,10 +384,189 @@ template {
   background-repeat: no-repeat;
   top: 0;
 }
-#mainContent .hero .hero-title .hero-h1 {
+#mainContent section.hero .hero-title .hide {
+  display: none;
+}
+#mainContent section.hero .hero-title .hero-h1 {
   width: 100%;
   bottom: 5rem;
   position: absolute;
-  color: white;
   text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 6rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  color: white;
+}
+#mainContent section.signup {
+  padding: 0;
+}
+#mainContent section.signup .signup-wrapper .signup-background {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/media/signup.jpeg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+}
+#mainContent section.signup .signup-title {
+  margin-left: 15rem;
+}
+#mainContent section.signup .signup-title .signup-h1 {
+  width: 100%;
+  top: 9rem;
+  position: absolute;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 7rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  color: white;
+}
+#mainContent section.signup .signup-title .signup-h1 .hero-h1 {
+  display: block;
+}
+#mainContent section.signup .signup-title .signup-button {
+  width: 100%;
+  top: 33rem;
+  position: absolute;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 7rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.site-header {
+  width: 90%;
+  height: auto;
+  margin: 2% 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  font-size: 1.6rem;
+  padding: 0;
+}
+.site-header .search-bar-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  border: 1px;
+  border-radius: 3px;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.55);
+}
+.site-header .search-bar-wrapper button#search-button {
+  height: auto;
+  padding: 0;
+  border: 0;
+  color: white;
+  background-color: transparent;
+}
+.site-header .search-bar-wrapper button#search-button svg {
+  width: 2rem;
+  margin: 0;
+  border: 0;
+}
+.site-header .search-bar-wrapper button#search-button svg .color-text {
+  padding: 1%;
+  color: #4d4d4d;
+}
+.site-header .search-bar-wrapper .search-input {
+  background: none;
+  border: none;
+}
+.site-header .search-bar-wrapper .search-input::placeholder {
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-shadow: none;
+  color: #4d4d4d;
+}
+.site-header .site-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.site-header .site-nav a {
+  text-decoration: none;
+  color: #dbd6dc;
+  padding: 1rem;
+  display: inline-block;
+}
+.site-header .logo-flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: center;
+}
+.site-header .logo-flex .logo-flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.site-header .logo-flex .logo-flex-row .logo-column {
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-shadow: none;
+  color: white;
+  width: 100%;
+  margin: 0.2rem;
+  padding: 5px 7px;
+  background-color: #9392a0;
+  border-radius: 0.2rem;
+  text-decoration: none;
+}
+.site-header .logo-flex .logo-flex-row div#m {
+  background-color: black;
+}
+@media (max-width:500px) {
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    width: 100%;
+    margin: 0;
+  }
+  .site-nav {
+    order: 0;
+  }
+  .logo-flex {
+    order: 1;
+    margin: 2px;
+  }
+  .search-bar-wrapper {
+    width: 100%;
+    order: 2;
+  }
+  #mainContent .hero .hero-wrapper .hero-background {
+    height: 60vh;
+  }
+  #mainContent .hero .hero-title .hero-h1 {
+    font-size: 3rem;
+    top: 50vh;
+  }
+}
+@media (max-width:1000px) {
+  .site-header {
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+  }
+  #mainContent .hero .hero-wrapper .hero-background {
+    height: 60vh;
+  }
+  #mainContent .hero .hero-title .hero-h1 {
+    font-size: 3rem;
+    top: 50vh;
+  }
 }

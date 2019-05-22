@@ -1,0 +1,41 @@
+        html {
+            box-sizing: border-box;
+            font-size: 62.5%;
+            font-family: 'Nunito', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            color: white;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            font-size: 1.2rem;
+
+            // Stops initial animations until page loads.
+            &.is-preload {
+
+                *,
+                *:before,
+                *:after {
+                    @include vendor('animation', 'none !important');
+                    @include vendor('transition', 'none !important');
+                }
+            }
+
+            // Prevents animations while resizing.
+            &.is-resizing {
+
+                *,
+                *:before,
+                *:after {
+                    @include vendor('animation', 'none !important');
+                    @include vendor('transition', 'none !important');
+                }
+            }
+
+        }
