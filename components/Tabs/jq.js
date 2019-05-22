@@ -1,4 +1,4 @@
-var folder = "/media/products/cameras/";
+var folder = "media/products/cameras/";
 
 $.ajax({
     url : folder,
