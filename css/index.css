@@ -397,6 +397,7 @@ body.is-resizing *:after {
 .site-header .search-bar-wrapper .search-input {
   background: none;
   border: none;
+  width: 30rem;
 }
 .site-header .search-bar-wrapper .search-input::placeholder {
   font-family: 'Nunito', sans-serif;
