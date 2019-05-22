@@ -1,8 +1,8 @@
-const hero = document.querySelector(".hero-title");
+const hero = document.getElementById("title");
 
-hero.addEventListener('click', e => {
-    e.stopPropagation;
-    e.classList.toggle('hide');
-    console.log('scroll');
-});
 
+function hide() {
+    hero.classList.remove('show');
+}
+
+hero.addEventListener('focusout', hide);

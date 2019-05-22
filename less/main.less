@@ -1,15 +1,13 @@
 #mainContent {
     background-color: black;
 
-    section {
+    section#categories {
         .font(5rem, 400, none, #4d4d4d);
         padding-top: 4rem;
         padding-bottom: 4rem;
-
-        //.categories {}
     }
 
-    section.hero {
+    section#hero {
         padding: 0;
 
         .hero-wrapper {
@@ -25,24 +23,29 @@
             }
         }
 
-        .hero-title {
-            .hide {
-                display: none;
-            }
-
+        div#title {
+        &.show{
+            bottom: 5rem;
+            position: absolute;
+            display: block;
+            width: 100%;
             .hero-h1 {
-                width: 100%;
-                bottom: 5rem;
-                position: absolute;
+
                 color: white;
                 text-align: center;
                 .font(6rem, 700, 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
             }
-
+            &.hide {
+            display: none;
         }
+        }
+        display:none;
+        }
+
+
     }
 
-    section.signup {
+    section#signup {
         padding: 0;
 
         .signup-wrapper {
@@ -60,7 +63,7 @@
 
         .signup-title {
             width: 80%;
-            //margin-left: 10%;
+            margin-left: 10%;
             display: flex;
             align-items: center;
             top: 10rem;
