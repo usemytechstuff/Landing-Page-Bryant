@@ -1,3 +1,9 @@
+.width-100 {
+  width: 100%;
+}
+.border-bottom-grey {
+  border-bottom: 1px solid lightgrey;
+}
 @font-face {
   font-family: 'Nunito';
   font-style: normal;
@@ -359,7 +365,7 @@ body.is-resizing *:after {
   @include vendor('animation', 'none !important');
   @include vendor('transition', 'none !important');
 }
-.site-header {
+header#index-header section#site-header {
   width: 90%;
   height: auto;
   margin: 2% 5%;
@@ -370,7 +376,7 @@ body.is-resizing *:after {
   font-size: 1.6rem;
   padding: 0;
 }
-.site-header .search-bar-wrapper {
+header#index-header section#site-header div.search-bar-wrapper {
   display: flex;
   justify-content: flex-start;
   border: 1px;
@@ -378,28 +384,28 @@ body.is-resizing *:after {
   padding: 0.5rem;
   background: rgba(255, 255, 255, 0.55);
 }
-.site-header .search-bar-wrapper button#search-button {
+header#index-header section#site-header div.search-bar-wrapper button#search-button {
   height: auto;
   padding: 0;
   border: 0;
   color: white;
   background-color: transparent;
 }
-.site-header .search-bar-wrapper button#search-button svg {
+header#index-header section#site-header div.search-bar-wrapper button#search-button svg {
   width: 2rem;
   margin: 0;
   border: 0;
 }
-.site-header .search-bar-wrapper button#search-button svg .color-text {
+header#index-header section#site-header div.search-bar-wrapper button#search-button svg .color-text {
   padding: 1%;
   color: #4d4d4d;
 }
-.site-header .search-bar-wrapper .search-input {
+header#index-header section#site-header div.search-bar-wrapper input.search-input {
   background: none;
   border: none;
   width: 30rem;
 }
-.site-header .search-bar-wrapper .search-input::placeholder {
+header#index-header section#site-header div.search-bar-wrapper input.search-input::placeholder {
   font-family: 'Nunito', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -407,31 +413,19 @@ body.is-resizing *:after {
   text-shadow: none;
   color: #4d4d4d;
 }
-.site-header .site-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-.site-header .site-nav a {
-  text-decoration: none;
-  color: #dbd6dc;
-  padding: 1rem;
-  display: inline-block;
-}
-.site-header .logo-flex {
+header#index-header section#site-header div.logo-flex {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-self: center;
 }
-.site-header .logo-flex .logo-flex-row {
+header#index-header section#site-header div.logo-flex div.logo-flex-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
-.site-header .logo-flex .logo-flex-row .logo-column {
+header#index-header section#site-header div.logo-flex div.logo-flex-row div.logo-column {
   font-family: 'Nunito', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -445,13 +439,111 @@ body.is-resizing *:after {
   border-radius: 0.2rem;
   text-decoration: none;
 }
-.site-header .logo-flex .logo-flex-row div#m {
+header#index-header section#site-header div.logo-flex div.logo-flex-row div#m {
   background-color: black;
 }
-#mainContent {
-  background-color: black;
+header#index-header section#site-header nav.site-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
-#mainContent section#categories {
+header#index-header section#site-header nav.site-nav a {
+  text-decoration: none;
+  color: #dbd6dc;
+  padding: 1rem;
+  display: inline-block;
+}
+main#mainContent section#hero {
+  padding: 0;
+}
+main#mainContent section#hero .hero-wrapper .hero-background {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/media/background.png);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+}
+main#mainContent section#hero div#title {
+  display: none;
+}
+main#mainContent section#hero div#title.show {
+  bottom: 5rem;
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+main#mainContent section#hero div#title.show .hero-h1 {
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 6rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  color: white;
+}
+main#mainContent section#hero div#title.show.hide {
+  display: none;
+}
+main#mainContent section#signup {
+  padding: 0;
+}
+main#mainContent section#signup .signup-wrapper .signup-background {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/media/signup.jpeg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+}
+main#mainContent section#signup .signup-title {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  top: 10rem;
+  flex-direction: column;
+  position: absolute;
+}
+main#mainContent section#signup .signup-title .signup-h1 {
+  width: 100%;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 7rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  color: white;
+}
+main#mainContent section#signup .signup-title .signup-h1 .hero-h1 {
+  display: block;
+}
+main#mainContent section#signup .signup-title .signup-button {
+  width: 100%;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 7rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  color: white;
+}
+main#mainContent section#signup .signup-title .signup-button svg {
+  fill: #605f6d;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-shadow: none;
+  color: white;
+}
+main#mainContent section#signup .signup-title .signup-button svg > text {
+  fill: white;
+}
+main#mainContent section#categories {
   font-family: 'Nunito', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -461,118 +553,63 @@ body.is-resizing *:after {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-#mainContent section#hero {
-  padding: 0;
-}
-#mainContent section#hero .hero-wrapper .hero-background {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/media/background.png);
-  height: 100vh;
+section#categories .tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  top: 0;
+  background-color: white;
+  font-size: 2rem;
 }
-#mainContent section#hero div#title {
-  display: none;
+section#categories .tabs .topics {
+  display: flex;
+  flex-direction: row;
 }
-#mainContent section#hero div#title.show {
-  bottom: 5rem;
-  position: absolute;
-  display: block;
-  width: 100%;
-}
-#mainContent section#hero div#title.show .hero-h1 {
-  text-align: center;
-  font-family: 'Nunito', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 6rem;
-  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
-  color: white;
-}
-#mainContent section#hero div#title.show.hide {
-  display: none;
-}
-#mainContent section#signup {
-  padding: 0;
-}
-#mainContent section#signup .signup-wrapper .signup-background {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/media/signup.jpeg);
-  height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  top: 0;
-}
-#mainContent section#signup .signup-title {
-  width: 80%;
-  margin-left: 10%;
+section#categories .tabs .topics .tab {
   display: flex;
   align-items: center;
-  top: 10rem;
   flex-direction: column;
-  position: absolute;
-}
-#mainContent section#signup .signup-title .signup-h1 {
-  width: 100%;
-  text-align: left;
-  font-family: 'Nunito', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 7rem;
-  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
   color: white;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
 }
-#mainContent section#signup .signup-title .signup-h1 .hero-h1 {
+section#categories .tabs .topics .tab:hover {
+  text-decoration: underline;
+}
+section#categories .tabs .topics .tab .img-wrapper img {
+  height: 20rem;
   display: block;
+  border-radius: 1rem;
 }
-#mainContent section#signup .signup-title .signup-button {
-  width: 100%;
-  text-align: left;
-  font-family: 'Nunito', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 7rem;
-  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
-  color: white;
-}
-#mainContent section#signup .signup-title .signup-button svg {
-  fill: #605f6d;
-  font-family: 'Nunito', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 3.5rem;
-  text-shadow: none;
-  color: white;
-}
-#mainContent section#signup .signup-title .signup-button svg > text {
-  fill: white;
+section#categories .tabs .topics .active-tab {
+  background-color: white;
+  color: black;
 }
 @media screen and (max-width:500px) {
-  .site-header {
+  header#index-header section#site-header {
     flex-wrap: wrap;
     justify-content: space-around;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     width: 100%;
     margin: 0;
   }
-  .site-nav {
+  header#index-header section#site-header nav.site-nav {
     order: 0;
   }
-  .logo-flex {
+  header#index-header section#site-header div.logo-flex {
     order: 1;
     margin: 2px;
   }
-  .search-bar-wrapper {
+  header#index-header section#site-header div.search-bar-wrapper {
     width: 100%;
     order: 2;
   }
-  #mainContent .hero .hero-wrapper .hero-background {
+  #mainContent section#hero .hero-wrapper .hero-background {
     height: 60vh;
   }
-  #mainContent .hero .hero-title .hero-h1 {
+  #mainContent section#hero .hero-title .hero-h1 {
     font-size: 3rem;
     top: 50vh;
   }
@@ -589,15 +626,15 @@ body.is-resizing *:after {
   }
 }
 @media screen and (max-width:1000px) {
-  .site-header {
+  section#site-header {
     justify-content: space-around;
     width: 100%;
     margin: 0;
   }
-  #mainContent .hero .hero-wrapper .hero-background {
+  #mainContent section#hero .hero-wrapper .hero-background {
     height: 60vh;
   }
-  #mainContent .hero .hero-title .hero-h1 {
+  #mainContent section#hero .hero-title .hero-h1 {
     font-size: 3rem;
     top: 50vh;
   }

@@ -1,96 +1,97 @@
-.site-header {
-    width: 90%;
-    height: auto;
-    //margin-left: 5%;
-    margin: 2% 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    font-size: 1.6rem;
-    padding:0;
-
-    .search-bar-wrapper {
+header#index-header {
+    section#site-header {
+        width: 90%;
+        height: auto;
+        //margin-left: 5%;
+        margin: 2% 5%;
         display: flex;
-        justify-content:flex-start;
-        border: 1px;
-        border-radius: 3px;
-        padding:.5rem;
-        background: rgba(255, 255, 255, 0.55);
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        font-size: 1.6rem;
+        padding: 0;
 
-        button#search-button {
-            //width: 5%;
-            height: auto;
-            padding: 0;
-            border: 0;
-            color: white;
-            background-color: transparent;
+        div.search-bar-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            border: 1px;
+            border-radius: 3px;
+            padding: .5rem;
+            background: rgba(255, 255, 255, 0.55);
 
-            svg {
-                width: 2rem;
-                margin: 0;
+            button#search-button {
+                //width: 5%;
+                height: auto;
+                padding: 0;
                 border: 0;
+                color: white;
+                background-color: transparent;
 
-                .color-text {
-                    padding: 1%;
-                    color: #4d4d4d;
+                svg {
+                    width: 2rem;
+                    margin: 0;
+                    border: 0;
+
+                    .color-text {
+                        padding: 1%;
+                        color: #4d4d4d;
+                    }
+                }
+            }
+
+            input.search-input {
+                background: none;
+                border: none;
+                width: 30rem;
+
+                &::placeholder {
+                    .font (1.6rem, 700, none, #4d4d4d);
                 }
             }
         }
 
-        .search-input {
-            background: none;
-            border: none;
-            width: 30rem;
-
-            &::placeholder {
-                .font (1.6rem, 700, none, #4d4d4d);
-            }
-        }
-    }
-
-    .site-nav {
-        ul {
-            list-style: none;
+        div.logo-flex {
             display: flex;
-            margin: 0;
-            padding: 0;
-        }
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-self: center;
 
-        a {
-            text-decoration: none;
-            color: #dbd6dc;
-            padding: 1rem;
-            display: inline-block;
-        }
-    }
-
-    .logo-flex {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-self: center;
-
-        .logo-flex-row {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 100%;
-
-            .logo-column {
-                .font(1.6rem, 700, none, white);
+            div.logo-flex-row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
                 width: 100%;
-                margin: 0.2rem;
-                padding: 5px 7px;
-                background-color: #9392a0;
-                border-radius: .2rem;
-                text-decoration: none;
+
+                div.logo-column {
+                    .font(1.6rem, 700, none, white);
+                    width: 100%;
+                    margin: 0.2rem;
+                    padding: 5px 7px;
+                    background-color: #9392a0;
+                    border-radius: .2rem;
+                    text-decoration: none;
+                }
+
+                div#m {
+                    background-color: black;
+                }
             }
 
-            div#m {
-                background-color: black;
+        }
+                nav.site-nav {
+            ul {
+                list-style: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: #dbd6dc;
+                padding: 1rem;
+                display: inline-block;
             }
         }
-
     }
 }
