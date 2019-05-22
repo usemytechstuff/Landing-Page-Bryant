@@ -1,5 +1,6 @@
 #mainContent {
     background-color: black;
+
     section {
         .font(5rem, 400, none, #4d4d4d);
         padding-top: 4rem;
@@ -7,8 +8,10 @@
 
         //.categories {}
     }
+
     section.hero {
-    padding:0;
+        padding: 0;
+
         .hero-wrapper {
             .hero-background {
                 background: linear-gradient(rgba(0, 0, 0, 0.1),
@@ -38,8 +41,10 @@
 
         }
     }
+
     section.signup {
-    padding:0;
+        padding: 0;
+
         .signup-wrapper {
             .signup-background {
                 background: linear-gradient(rgba(0, 0, 0, 0.1),
@@ -54,30 +59,44 @@
         }
 
         .signup-title {
-            margin-left:15rem;
- 
+            width: 80%;
+            //margin-left: 10%;
+            display: flex;
+            align-items: center;
+            top: 10rem;
+            flex-direction: column;
+            position: absolute;
 
             .signup-h1 {
                 width: 100%;
-                top: 9rem;
-                position: absolute;
                 color: white;
                 text-align: left;
                 .font(7rem, 700, 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
+
                 .hero-h1 {
-                display:block;
+                    display: block;
                 }
             }
+
             .signup-button {
-                              width: 100%;
-                top: 33rem;
-                position: absolute;
+                width: 100%;
                 color: white;
                 text-align: left;
                 .font(7rem, 700, 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
-            }
 
+                svg {
+                    fill: #605f6d;
+                    .font(3.5rem, 700, none);
+
+                    >text {
+                        fill: white;
+                    }
+                }
+
+            }
         }
+
     }
+
 
 }

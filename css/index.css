@@ -412,12 +412,15 @@ body.is-resizing *:after {
   top: 0;
 }
 #mainContent section.signup .signup-title {
-  margin-left: 15rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  top: 10rem;
+  flex-direction: column;
+  position: absolute;
 }
 #mainContent section.signup .signup-title .signup-h1 {
   width: 100%;
-  top: 9rem;
-  position: absolute;
   text-align: left;
   font-family: 'Nunito', sans-serif;
   font-style: normal;
@@ -431,8 +434,6 @@ body.is-resizing *:after {
 }
 #mainContent section.signup .signup-title .signup-button {
   width: 100%;
-  top: 33rem;
-  position: absolute;
   text-align: left;
   font-family: 'Nunito', sans-serif;
   font-style: normal;
@@ -440,6 +441,18 @@ body.is-resizing *:after {
   font-size: 7rem;
   text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
   color: white;
+}
+#mainContent section.signup .signup-title .signup-button svg {
+  fill: #605f6d;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-shadow: none;
+  color: white;
+}
+#mainContent section.signup .signup-title .signup-button svg > text {
+  fill: white;
 }
 .site-header {
   width: 90%;
@@ -555,6 +568,17 @@ body.is-resizing *:after {
     font-size: 3rem;
     top: 50vh;
   }
+  #mainContent section.signup .signup-wrapper .signup-background {
+    height: 100vh;
+  }
+  #mainContent section.signup .signup-title {
+    width: 90%;
+    margin-left: 5%;
+    top: 2rem;
+  }
+  #mainContent section.signup .signup-title .signup-h1 {
+    font-size: 6rem;
+  }
 }
 @media (max-width:1000px) {
   .site-header {
@@ -568,5 +592,13 @@ body.is-resizing *:after {
   #mainContent .hero .hero-title .hero-h1 {
     font-size: 3rem;
     top: 50vh;
+  }
+  #mainContent section.signup .signup-wrapper .signup-background {
+    height: 100vh;
+  }
+  #mainContent section.signup .signup-title {
+    width: 90%;
+    margin-left: 5%;
+    top: 2rem;
   }
 }
