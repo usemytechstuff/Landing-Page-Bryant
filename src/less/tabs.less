@@ -1,0 +1,46 @@
+section#categories {
+    .tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        background-color: white;
+        font-size: 2rem;
+
+        .topics {
+            display: flex;
+            flex-direction: row;
+
+            .tab {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                color: white;
+                margin: 0 .5rem;
+                padding: 0;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                .img-wrapper {
+
+                    img {
+                        height: 20rem;
+                        display: block;
+                        border-radius: 1rem;
+                    }
+                }
+
+            }
+
+            .active-tab {
+                background-color: white;
+                color: black;
+
+            }
+        }
+    }
+}
