@@ -1,0 +1,99 @@
+header#index-header {
+    section#site-header {
+        width: 100%;
+        height: auto;
+        margin: 0% 0%;
+        padding: 2% 5%;        
+        padding-top:2%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        font-size: 1.6rem;
+        z-index: 10;
+                background: linear-gradient(rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.3));                
+
+        div.search-bar-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            border: .1rem;
+            border-radius: .3rem;
+            padding: .5rem;
+            background: rgba(255, 255, 255, 0.55);
+
+            button#search-button {
+                height: auto;
+                padding: 0;
+                border: 0;
+                color: white;
+                background-color: transparent;
+
+                svg {
+                    width: 2rem;
+                    margin: 0;
+                    border: 0;
+
+                    .color-text {
+                        padding: 1%;
+                        color: #4d4d4d;
+                    }
+                }
+            }
+
+            input.search-input {
+                background: none;
+                border: none;
+                width: 30rem;
+
+                &::placeholder {
+                    .font (1.6rem, 700, none, #4d4d4d);
+                }
+            }
+        }
+
+        div.logo-flex {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-self: center;
+
+            div.logo-flex-row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+
+                div.logo-column {
+                    .font(1.6rem, 700, none, white);
+                    width: 100%;
+                    margin: 0.2rem;
+                    padding: .5rem .7rem;
+                    background-color: #9392a0;
+                    border-radius: .2rem;
+                    text-decoration: none;
+                }
+
+                div#m {
+                    background-color: black;
+                }
+            }
+
+        }
+                nav.site-nav {
+            ul {
+                list-style: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: #dbd6dc;
+                padding: 1rem;
+                display: inline-block;
+            }
+        }
+    }
+}
