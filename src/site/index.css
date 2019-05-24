@@ -360,16 +360,18 @@ body.is-resizing *:after {
   @include vendor('transition', 'none !important');
 }
 header#index-header section#site-header {
-  width: 90%;
+  width: 100%;
   height: auto;
-  margin: 2% 5%;
+  margin: 0% 0%;
+  padding: 2% 5%;
+  padding-top: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   font-size: 1.6rem;
-  padding: 0;
   z-index: 10;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
 }
 header#index-header section#site-header div.search-bar-wrapper {
   display: flex;
@@ -448,6 +450,9 @@ header#index-header section#site-header nav.site-nav a {
   color: #dbd6dc;
   padding: 1rem;
   display: inline-block;
+}
+main#mainContent {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 }
 main#mainContent section#hero {
   padding: 0;
@@ -545,38 +550,72 @@ main#mainContent section#categories {
   color: #4d4d4d;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  width: 90%;
 }
-section#categories .tabs {
+main#mainContent section#categories .tabs {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   width: 100%;
-  background-color: white;
+  margin: 2% 5%;
   font-size: 2rem;
 }
-section#categories .tabs .topics {
-  display: flex;
-  flex-direction: row;
-}
-section#categories .tabs .topics .tab {
+main#mainContent section#categories .tabs .tab {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: white;
   margin: 0 0.5rem;
   padding: 0;
   cursor: pointer;
+  border-radius: 1rem;
 }
-section#categories .tabs .topics .tab:hover {
+main#mainContent section#categories .tabs .tab:hover {
   text-decoration: underline;
 }
-section#categories .tabs .topics .tab .img-wrapper img {
-  height: 20rem;
+main#mainContent section#categories .tabs .tab .img-wrapper img {
+  width: 30rem;
   display: block;
   border-radius: 1rem;
 }
-section#categories .tabs .topics .active-tab {
+main#mainContent section#categories .tabs .active-tab {
   background-color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
   color: black;
+}
+main#mainContent section#categories .cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2% 5%;
+  font-size: 2rem;
+}
+main#mainContent section#categories .cards .card {
+  border-bottom: 0.1rem solid-grey;
+  display: none;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 38rem;
+  margin-bottom: 1.6rem;
+  padding: 2.4rem;
+}
+main#mainContent section#categories .cards .card .img-wrapper {
+  padding-right: 1rem;
+}
+main#mainContent section#categories .cards .card .img-wrapper img {
+  width: 25rem;
+  display: block;
+  border-radius: 1rem;
+}
+main#mainContent section#categories .cards .card span {
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+main#mainContent section#categories .cards .defaultCard {
+  display: flex;
 }
