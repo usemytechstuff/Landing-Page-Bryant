@@ -541,6 +541,9 @@ main#mainContent section#signup .signup-title .signup-button svg {
 main#mainContent section#signup .signup-title .signup-button svg > text {
   fill: white;
 }
+main#mainContent section#signup .signup-title .signup-button:active {
+  transform: translateY(4px);
+}
 main#mainContent section#categories {
   font-family: 'Nunito', sans-serif;
   font-style: normal;
@@ -548,20 +551,25 @@ main#mainContent section#categories {
   font-size: 5rem;
   text-shadow: none;
   color: #4d4d4d;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   padding-top: 4rem;
-  padding-bottom: 4rem;
-  width: 90%;
+  padding-bottom: 0rem;
 }
-main#mainContent section#categories .tabs {
+main#mainContent section#categories .categories-title-wrapper {
+  font-size: 4rem;
+  margin-left: 2%;
+}
+main#mainContent section#categories .cats {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
   width: 100%;
-  margin: 2% 5%;
+  margin: 2% auto;
+  padding: 0 5%;
   font-size: 2rem;
 }
-main#mainContent section#categories .tabs .tab {
+main#mainContent section#categories .cats .cat {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -570,15 +578,15 @@ main#mainContent section#categories .tabs .tab {
   cursor: pointer;
   border-radius: 1rem;
 }
-main#mainContent section#categories .tabs .tab:hover {
+main#mainContent section#categories .cats .cat:hover {
   text-decoration: underline;
 }
-main#mainContent section#categories .tabs .tab .img-wrapper img {
-  width: 30rem;
+main#mainContent section#categories .cats .cat .img-wrapper img {
+  width: 25rem;
   display: block;
   border-radius: 1rem;
 }
-main#mainContent section#categories .tabs .active-tab {
+main#mainContent section#categories .cats .active-cat {
   background-color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
   color: black;
@@ -589,8 +597,9 @@ main#mainContent section#categories .cards {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 2% auto;
+  padding: 0 5%;
   width: 100%;
-  margin: 2% 5%;
   font-size: 2rem;
 }
 main#mainContent section#categories .cards .card {
@@ -618,4 +627,257 @@ main#mainContent section#categories .cards .card span {
 }
 main#mainContent section#categories .cards .defaultCard {
   display: flex;
+}
+main#mainContent section#about {
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5rem;
+  text-shadow: none;
+  color: #4d4d4d;
+}
+main#mainContent section#about .categories-title-wrapper {
+  font-size: 4rem;
+  margin-left: 2%;
+}
+main#mainContent section#about .about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 2% auto;
+  padding: 0 5%;
+}
+main#mainContent section#about .about-content .about-image {
+  top: 0;
+}
+main#mainContent section#about .about-content .about-image img {
+  width: 60rem;
+  padding: 2%;
+}
+main#mainContent section#about .about-content .about-p {
+  font-size: 6rem;
+  padding: 2%;
+}
+main#mainContent .bio-background {
+  background: url(/images/about.jpg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+}
+main#mainContent section#bios {
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5rem;
+  text-shadow: none;
+  color: #4d4d4d;
+  padding-top: 1rem;
+}
+main#mainContent section#bios section#team-members {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+main#mainContent section#bios section#team-members .team-members-main {
+  padding: 30px 0;
+}
+main#mainContent section#bios section#team-members .team-members-main .team-members-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main#mainContent section#bios section#team-members .team-members-main .team-members-container .team-members-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  height: 65rem;
+  margin: 3rem;
+  box-shadow: 2px 2px 14px 0 rgba(0, 0, 0, 0.23);
+  overflow: hidden;
+  padding: 15px;
+}
+main#mainContent section#bios section#team-members .team-members-main .team-members-container .team-members-member img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 30rem;
+  height: auto;
+  border-radius: 15rem;
+}
+main#mainContent section#bios section#team-members .team-members-main .team-members-container .team-members-member h5 {
+  padding-top: 10px;
+  font-size: 3.5rem;
+}
+main#mainContent section#bios section#team-members .team-members-main .team-members-container .team-members-member p {
+  padding: 0px;
+  font-size: 3rem;
+}
+main#mainContent section#bios button.member-btn {
+  padding: 3px 8px;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  border-style: none;
+}
+main#mainContent section#bios button.member-btn:hover,
+main#mainContent section#bios button.member-btn:active {
+  background-color: #52527a;
+  border-color: #5c5c8a;
+  color: #fff !important;
+}
+main#mainContent.about {
+  background: transparent;
+}
+@media screen and (max-width:500px) {
+  header#index-header section#site-header {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    width: 100%;
+    margin: 0;
+  }
+  header#index-header section#site-header nav.site-nav {
+    order: 0;
+  }
+  header#index-header section#site-header div.logo-flex {
+    order: 1;
+    margin: 2px;
+  }
+  header#index-header section#site-header div.search-bar-wrapper {
+    width: 100%;
+    order: 2;
+  }
+  #mainContent section#hero .hero-wrapper .hero-background {
+    height: 60vh;
+  }
+  #mainContent section#hero .hero-title .hero-h1 {
+    font-size: 3rem;
+    top: 50vh;
+  }
+  #mainContent section#signup .signup-wrapper .signup-background {
+    height: 100vh;
+  }
+  #mainContent section#signup .signup-title {
+    width: 90%;
+    margin-left: 5%;
+    top: 2rem;
+  }
+  #mainContent section#signup .signup-title .signup-h1 {
+    font-size: 6rem;
+  }
+  #mainContent section#categories {
+    font-size: 1.2rem;
+    height: 100vh;
+  }
+  #mainContent section#categories .categories-title-wrapper {
+    font-size: 2rem;
+    margin-left: 2%;
+  }
+  #mainContent section#categories .cats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 2% auto;
+    padding: 0 5%;
+    font-size: 2rem;
+  }
+  #mainContent section#categories .cats .cat {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0.5rem;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 1rem;
+  }
+  #mainContent section#categories .cats .cat:hover {
+    text-decoration: underline;
+  }
+  #mainContent section#categories .cats .cat .img-wrapper img {
+    width: 15rem;
+    display: block;
+    border-radius: 1rem;
+  }
+  #mainContent section#categories .cats .active-cat {
+    background-color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    color: black;
+  }
+  #mainContent section#categories .cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 2% auto;
+    padding: 0 5%;
+    width: 100%;
+    font-size: 2rem;
+  }
+  #mainContent section#categories .cards .card {
+    border-bottom: 0.1rem solid-grey;
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 15rem;
+    margin-bottom: 1.6rem;
+    padding: 2.4rem;
+  }
+  #mainContent section#categories .cards .card .img-wrapper {
+    padding-right: 1rem;
+  }
+  #mainContent section#categories .cards .card .img-wrapper img {
+    width: 15rem;
+    display: block;
+    border-radius: 1rem;
+  }
+  #mainContent section#categories .cards .card span {
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+  }
+  #mainContent section#categories .cards .defaultCard {
+    display: flex;
+  }
+}
+@media screen and (max-width:1000px) {
+  section#site-header {
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+  }
+  #mainContent section#hero .hero-wrapper .hero-background {
+    height: 60vh;
+  }
+  #mainContent section#hero .hero-title .hero-h1 {
+    font-size: 3rem;
+    top: 50vh;
+  }
+  #mainContent section#signup .signup-wrapper .signup-background {
+    height: 100vh;
+  }
+  #mainContent section#signup .signup-title {
+    width: 90%;
+    margin-left: 5%;
+    top: 2rem;
+  }
 }

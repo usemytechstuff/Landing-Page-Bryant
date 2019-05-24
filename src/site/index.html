@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="index.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="scripts/tabs.js" async></script>
+    <script src="scripts/login.js" async></script>    
     <script type="module" src="scripts/products.js" async></script>
     <!-- <script src="scripts/carousel.js" async></script>     -->
 </head>
@@ -39,9 +40,9 @@
             <nav class="site-nav">
                 <ul>
                     <li><a href="#0">Equipment</a></li>
-                    <li><a href="#0">Help</a></li>
+                    <li><a href="bios.html">Bios</a></li>
                     <li><a href="signup.html">Sign up</a></li>
-                    <li><a href="#0">Login</a></li>
+                    <li id="login"><a href="#0">Login</a></li>
                 </ul>
             </nav>
         </section>
@@ -57,301 +58,317 @@
             </div>
         </section>
         <section id="categories">
-            <div class="categories-wrapper">
+            <div class="categories-title-wrapper">
                 <h2 class="categories-title"><span>Categories</span></h2>
             </div>
-            <div class="tabs">
-                <div data-tab="cameras" class="tab">
+            <div class="cats">
+                <div data-tab="cameras" class="cat">
                     <div class="img-wrapper"><img src="/images/categories/camera.jpg" alt=""></div>
                     <div class="summary">
                         <p>Cameras</p>
                     </div>
                 </div>
-                <div data-tab="drones" class="tab">
+                <div data-tab="drones" class="cat">
                     <div class="img-wrapper"><img src="/images/categories/drone.jpg" alt=""></div>
                     <div class="summary">
                         <p>Drones</p>
                     </div>
                 </div>
-                <div data-tab="headphones" class="tab">
+                <div data-tab="headphones" class="cat">
                     <div class="img-wrapper"><img src="/images/categories/headphones.jpg" alt=""></div>
                     <div class="summary">
                         <p>Headphones</p>
                     </div>
                 </div>
-                <div data-tab="projectors" class="tab">
+                <div data-tab="projectors" class="cat">
                     <div class="img-wrapper"><img src="/images/categories/projector.jpeg" alt=""></div>
                     <div class="summary">
                         <p>Projectors</p>
                     </div>
                 </div>
-                <div data-tab="screens" class="tab">
+                <div data-tab="screens" class="cat">
                     <div class="img-wrapper"><img src="/images/categories/screens.jpg" alt=""></div>
                     <div class="summary">
                         <p>Screens</p>
                     </div>
                 </div>
-                <div data-tab="virtualReality" class="tab">
+                <div data-tab="virtualReality" class="cat">
                     <div class="img-wrapper"><img src="/images/categories/vr.jpg" alt=""></div>
                     <div class="summary">
                         <p>Virtual Reality</p>
                     </div>
                 </div>
             </div>
-            <div class="categories-wrapper">
+            <div class="categories-title-wrapper">
                 <h2 class="categories-title"><span>Products</span></h2>
-            </div>            
+            </div>
             <div class="cards">
-            
-            <div data-tab="virtualReality" class="card">
-                <div class="img-wrapper"> <img src='/images/products/aerial-view-1082087__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="virtualReality" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/aerial-view-1082087__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="headphone" class="card">
-                <div class="img-wrapper"> <img src='/images/products/audio-1867121__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="headphone" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/audio-1867121__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="virtualReality" class="card">
-                <div class="img-wrapper"> <img src='/images/products/austria-4054679__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="virtualReality" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/austria-4054679__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="headphones" class="card">
-                <div class="img-wrapper"> <img src='/images/products/banner-1155437__340.png'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="headphones" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/banner-1155437__340.png'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="drones" class="card">
-                <div class="img-wrapper"> <img src='/images/products/blue-4145659__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="drones" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/blue-4145659__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="camera" class="card">
-                <div class="img-wrapper"> <img src='/images/products/camera-1149767__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="camera" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/camera-1149767__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="camera" class="card">
-                <div class="img-wrapper"> <img src='/images/products/camera-1866961__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="camera" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/camera-1866961__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="camera" class="card">
-                <div class="img-wrapper"> <img src='/images/products/camera-2598507__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="camera" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/camera-2598507__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="camera" class="card">
-                <div class="img-wrapper"> <img src='/images/products/camera-514992__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="camera" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/camera-514992__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="camera" class="card">
-                <div class="img-wrapper"> <img src='/images/products/camera-581126__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="camera" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/camera-581126__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="camera" class="card">
-                <div class="img-wrapper"> <img src='/images/products/camera-711040__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="camera" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/camera-711040__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="camera" class="card">
-                <div class="img-wrapper"> <img src='/images/products/camera-820018__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="camera" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/camera-820018__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="virtualReality" class="card">
-                <div class="img-wrapper"> <img src='/images/products/cyber-glasses-1938449__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="virtualReality" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/cyber-glasses-1938449__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="projectors" class="card">
-                <div class="img-wrapper"> <img src='/images/products/demonstration-767983__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="projectors" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/demonstration-767983__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="virtualReality" class="card">
-                <div class="img-wrapper"> <img src='/images/products/dj-690986__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="virtualReality" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/dj-690986__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="drone" class="card">
-                <div class="img-wrapper"> <img src='/images/products/drone-1080844__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="drone" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/drone-1080844__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="drone" class="card defaultCard">
-                <div class="img-wrapper"> <img src='/images/products/drone-1245980__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="drone" class="card defaultCard">
+                    <div class="img-wrapper"> <img src='/images/products/drone-1245980__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="drone" class="card">
-                <div class="img-wrapper"> <img src='/images/products/drone-2724257__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="drone" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/drone-2724257__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="headphones" class="card">
-                <div class="img-wrapper"> <img src='/images/products/face-3324569__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="headphones" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/face-3324569__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="cameras" class="card">
-                <div class="img-wrapper"> <img src='/images/products/film-1668918__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="cameras" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/film-1668918__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="cameras" class="card">
-                <div class="img-wrapper"> <img src='/images/products/film-596009__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="cameras" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/film-596009__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="drone" class="card">
-                <div class="img-wrapper"> <img src='/images/products/gadgets-336635__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="drone" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/gadgets-336635__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="headphones" class="card defaultCard">
-                <div class="img-wrapper"> <img src='/images/products/girl-1990347__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="headphones" class="card defaultCard">
+                    <div class="img-wrapper"> <img src='/images/products/girl-1990347__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="drones" class="card">
-                <div class="img-wrapper"> <img src='/images/products/girl-869213__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="drones" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/girl-869213__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="drone" class="card">
-                <div class="img-wrapper"> <img src='/images/products/helicopter-2966569__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="drone" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/helicopter-2966569__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="virtualReality" class="card">
-                <div class="img-wrapper"> <img src='/images/products/hmd-4140960__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="virtualReality" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/hmd-4140960__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="virtualReality" class="card">
-                <div class="img-wrapper"> <img src='/images/products/home-office-336581__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="virtualReality" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/home-office-336581__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="drones" class="card">
-                <div class="img-wrapper"> <img src='/images/products/laptop-1104066__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="drones" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/laptop-1104066__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="drones" class="card defaultCard">
-                <div class="img-wrapper"> <img src='/images/products/lens-3114729__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="drones" class="card defaultCard">
+                    <div class="img-wrapper"> <img src='/images/products/lens-3114729__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="virtualReality" class="card">
-                <div class="img-wrapper"> <img src='/images/products/mobile-605422__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="virtualReality" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/mobile-605422__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="drones" class="card">
-                <div class="img-wrapper"> <img src='/images/products/movie-918655__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="drones" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/movie-918655__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="headphones" class="card">
-                <div class="img-wrapper"> <img src='/images/products/night-1927265__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="headphones" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/night-1927265__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="camera" class="card">
-                <div class="img-wrapper"> <img src='/images/products/photo-camera-219958__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="camera" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/photo-camera-219958__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="projector" class="card">
-                <div class="img-wrapper"> <img src='/images/products/projector-64149__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="projector" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/projector-64149__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="virtualReality" class="card">
-                <div class="img-wrapper"> <img src='/images/products/quadrocopter-1658967__340.png'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="virtualReality" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/quadrocopter-1658967__340.png'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="drone" class="card">
-                <div class="img-wrapper"> <img src='/images/products/smartphone-1618909__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="drone" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/smartphone-1618909__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="virtualReality" class="card">
-                <div class="img-wrapper"> <img src='/images/products/smartphone-1790835__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="virtualReality" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/smartphone-1790835__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="virtualReality" class="card">
-                <div class="img-wrapper"> <img src='/images/products/smartphone-2269340__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="virtualReality" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/smartphone-2269340__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="screens" class="card defaultCard">
-                <div class="img-wrapper"> <img src='/images/products/video-1668906__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="screens" class="card defaultCard">
+                    <div class="img-wrapper"> <img src='/images/products/video-1668906__340.jpg' id="myImg"> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="virtualReality" class="card defaultCard">
-                <div class="img-wrapper"> <img src='/images/products/virtual-reality-1541316__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="virtualReality" class="card defaultCard">
+                    <div class="img-wrapper"> <img src='/images/products/virtual-reality-1541316__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
-            </div>
-            <div data-tab="projectors" class="card">
-                <div class="img-wrapper"> <img src='/images/products/workplace-2303851__340.jpg'> </div>
-                <div class="summary">
-                    <p>Product Example</p>
+                <div data-tab="projectors" class="card">
+                    <div class="img-wrapper"> <img src='/images/products/workplace-2303851__340.jpg'> </div>
+                    <div class="summary">
+                        <p>Product Example</p>
+                    </div>
                 </div>
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+        </section>
+        <section id="about">
+            <div class="categories-title-wrapper">
+                <h2 class="categories-title"><span>About</span></h2>
             </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/about.jpg" class="">
+                </div>
+                <p class="about-p">
+                    Our mission is to help all users have the ability to earn money by renting out high end tech to others or find the equipment they need in oder to enhance their day to day lives.
+                </p>
             </div>
         </section>
-
+        <!-- </div> -->
     </main>
 </body>
 

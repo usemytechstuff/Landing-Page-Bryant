@@ -1,6 +1,7 @@
 main#mainContent {
-                background: linear-gradient(rgba(0, 0, 0, 0.1),
-                    rgba(0, 0, 0, 0.1));        
+    background: linear-gradient(rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1));
+
     section#hero {
         padding: 0;
 
@@ -18,20 +19,22 @@ main#mainContent {
         }
 
         div#title {
-        &.hero-cta{
-            bottom: 5rem;
-            position: absolute;
-            display: block;
-            width: 100%;
-            z-index: 5;
-            .hero-h1 {
+            &.hero-cta {
+                bottom: 5rem;
+                position: absolute;
+                display: block;
+                width: 100%;
+                z-index: 5;
 
-                color: white;
-                text-align: center;
-                .font(6rem, 700, 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
+                .hero-h1 {
+
+                    color: white;
+                    text-align: center;
+                    .font(6rem, 700, 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
+                }
             }
-        }
-        display:none;
+
+            display:none;
         }
 
 
@@ -88,11 +91,66 @@ main#mainContent {
                     }
                 }
 
+                &:active {
+
+
+                    transform: translateY(4px);
+                }
             }
         }
 
     }
 
+    .section-categories (); // CATEGORIES CARD SECTION MIXIN
 
+    section#about {
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+        .font(5rem, 400, none, #4d4d4d);
+//        background: linear-gradient(rgba(0, 0, 0, 0.1),
+  //      rgba(0, 0, 0, 0.1));
+
+        .categories-title-wrapper {
+            font-size: 4rem;
+            margin-left: 2%;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            margin: 2% auto;
+            padding: 0 5%;
+
+            .about-image {
+                top: 0;
+
+                img {
+                    width: 60rem;
+                    padding: 2%;
+                }
+            }
+
+            .about-p {
+                //width: 30%;
+                font-size: 6rem;
+                padding: 2%;
+            }
+        }
+
+    }
+
+    .section-bios ();
+
+&.about {
+    background:transparent;
+}
 
 }
+
+
+
+
