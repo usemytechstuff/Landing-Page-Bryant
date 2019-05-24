@@ -9,9 +9,9 @@
     }
 
 
-    .search-bar-wrapper {}
 
-    #mainContent {
+
+    main#mainContent {
         section#hero {
             .hero-wrapper {
                 .hero-background {
@@ -19,10 +19,12 @@
                 }
             }
 
-            .hero-title {
+            div#title.hero-cta {
+                top: 25rem;
+
                 .hero-h1 {
-                    font-size: 3rem;
-                    top: 50vh;
+                    font-size: 4rem;
+
                 }
             }
         }
@@ -40,6 +42,34 @@
                 top: 2rem;
 
                 .signup-h1 {}
+            }
+        }
+
+        section#categories {
+            font-size: 3rem;
+
+            .categories-title-wrapper {
+                font-size: 2.5rem;
+            }
+
+            .cats {
+                flex-wrap: wrap;
+            }
+        }
+
+        section#about {
+            .about-content {
+                flex-wrap: wrap;
+
+                .about-image {
+                    img {
+                        width: 35rem;
+                    }
+                }
+
+                .about-p {
+                    font-size: 3rem;
+                }
             }
         }
 

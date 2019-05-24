@@ -27,7 +27,7 @@
         }
     }
 
-    #mainContent {
+    main#mainContent {
         section#hero {
             .hero-wrapper {
                 .hero-background {
@@ -35,10 +35,11 @@
                 }
             }
 
-            .hero-title {
+            div#title.hero-cta {
+                top: 14rem;
+
                 .hero-h1 {
                     font-size: 3rem;
-                    top: 50vh;
                 }
             }
         }
@@ -62,114 +63,75 @@
         }
 
 
-    
 
-section#categories {
-        font-size:1.2rem;
 
-        height: 100vh;
+        section#categories {
+            font-size: 1.2rem;
 
-        .categories-title-wrapper {
-        font-size: 2rem;
-        margin-left: 2%;
-        }
+            .categories-title-wrapper {
+                font-size: 2rem;
+                margin-left: 2%;
+            }
+            .cats {
+                flex-wrap: wrap;
 
-        .cats {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-direction: column;
-            width: 100%;
-            margin: 2% auto;
-            padding: 0 5%;
-            font-size: 2rem;
+                .cat {
+                    flex-wrap: wrap;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 0 .5rem;
+                    padding: 0;
+                    cursor: pointer;
+                    border-radius: 1rem;
 
-            .cat {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                margin: 0 .5rem;
-                padding: 0;
-                cursor: pointer;
-                border-radius: 1rem;
+                    &:hover {
+                        text-decoration: underline;
+                    }
 
-                &:hover {
-                    text-decoration: underline;
+                    .img-wrapper {
+
+                        >img {
+                            //width: 100%;
+                            width: 15rem;
+                            //min-width: 40rem;
+                            display: block;
+                            border-radius: 1rem;
+                        }
+                    }
+
                 }
+            }
 
-                .img-wrapper {
-
-                    img {
-                        //width: 100%;
-                        width: 15rem;
-                        //min-width: 40rem;
-                        display: block;
-                        border-radius: 1rem;
+            .cards {
+                .card {
+                width: auto;
+                    .img-wrapper {
+                    padding:0;
+                        img {
+                            width: 15rem;
+                        }
                     }
                 }
-
             }
-
-            .active-cat {
-                background-color: white;
-                background: linear-gradient(rgba(0, 0, 0, 0.7),
-                    rgba(0, 0, 0, 0.5));
-                color: black;
-
-
-            }
-
         }
+        section#about {
+            .about-content {
+                flex-wrap: wrap;
 
-        .cards {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-direction: column;
-            flex-wrap: wrap;
-            margin: 2% auto;
-            padding: 0 5%;            
-            width: 100%;
-            font-size: 2rem;
-
-
-            .card {
-                border-bottom: .1rem solid-grey;
-                display: none;
-                justify-content: space-between;
-                flex-direction: column;
-                width: 15rem;
-                margin-bottom: 1.6rem;
-                padding: 2.4rem;
-
-
-                .img-wrapper {
-                    padding-right: 1rem;
-
+                .about-image {
                     img {
-                        width: 15rem;
-                        display: block;
-                        border-radius: 1rem;
+                        width: 20rem;
                     }
                 }
-
-                span {
-                    padding-left: 1rem;
-                    font-size: 1.2rem;
-                    letter-spacing: .1rem;
-                    font-weight: bold;
+                .about-p {
+                    font-size: 2rem;
                 }
-
-            }
-
-            .defaultCard {
-                display: flex;
             }
         }
+
+
+        }
+
+
 
     }
-
-}
-
-
-}

@@ -630,7 +630,6 @@ main#mainContent section#categories .cards .defaultCard {
 }
 main#mainContent section#about {
   padding: 0;
-  height: 100vh;
   width: 100%;
   font-family: 'Nunito', sans-serif;
   font-style: normal;
@@ -660,7 +659,7 @@ main#mainContent section#about .about-content .about-image img {
   padding: 2%;
 }
 main#mainContent section#about .about-content .about-p {
-  font-size: 6rem;
+  font-size: 4rem;
   padding: 2%;
 }
 main#mainContent .bio-background {
@@ -763,44 +762,38 @@ main#mainContent.about {
     width: 100%;
     order: 2;
   }
-  #mainContent section#hero .hero-wrapper .hero-background {
+  main#mainContent section#hero .hero-wrapper .hero-background {
     height: 60vh;
   }
-  #mainContent section#hero .hero-title .hero-h1 {
-    font-size: 3rem;
-    top: 50vh;
+  main#mainContent section#hero div#title.hero-cta {
+    top: 14rem;
   }
-  #mainContent section#signup .signup-wrapper .signup-background {
+  main#mainContent section#hero div#title.hero-cta .hero-h1 {
+    font-size: 3rem;
+  }
+  main#mainContent section#signup .signup-wrapper .signup-background {
     height: 100vh;
   }
-  #mainContent section#signup .signup-title {
+  main#mainContent section#signup .signup-title {
     width: 90%;
     margin-left: 5%;
     top: 2rem;
   }
-  #mainContent section#signup .signup-title .signup-h1 {
+  main#mainContent section#signup .signup-title .signup-h1 {
     font-size: 6rem;
   }
-  #mainContent section#categories {
+  main#mainContent section#categories {
     font-size: 1.2rem;
-    height: 100vh;
   }
-  #mainContent section#categories .categories-title-wrapper {
+  main#mainContent section#categories .categories-title-wrapper {
     font-size: 2rem;
     margin-left: 2%;
   }
-  #mainContent section#categories .cats {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin: 2% auto;
-    padding: 0 5%;
-    font-size: 2rem;
+  main#mainContent section#categories .cats {
+    flex-wrap: wrap;
   }
-  #mainContent section#categories .cats .cat {
-    display: flex;
+  main#mainContent section#categories .cats .cat {
+    flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
     margin: 0 0.5rem;
@@ -808,55 +801,31 @@ main#mainContent.about {
     cursor: pointer;
     border-radius: 1rem;
   }
-  #mainContent section#categories .cats .cat:hover {
+  main#mainContent section#categories .cats .cat:hover {
     text-decoration: underline;
   }
-  #mainContent section#categories .cats .cat .img-wrapper img {
+  main#mainContent section#categories .cats .cat .img-wrapper > img {
     width: 15rem;
     display: block;
     border-radius: 1rem;
   }
-  #mainContent section#categories .cats .active-cat {
-    background-color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
-    color: black;
+  main#mainContent section#categories .cards .card {
+    width: auto;
   }
-  #mainContent section#categories .cards {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+  main#mainContent section#categories .cards .card .img-wrapper {
+    padding: 0;
+  }
+  main#mainContent section#categories .cards .card .img-wrapper img {
+    width: 15rem;
+  }
+  main#mainContent section#about .about-content {
     flex-wrap: wrap;
-    margin: 2% auto;
-    padding: 0 5%;
-    width: 100%;
+  }
+  main#mainContent section#about .about-content .about-image img {
+    width: 20rem;
+  }
+  main#mainContent section#about .about-content .about-p {
     font-size: 2rem;
-  }
-  #mainContent section#categories .cards .card {
-    border-bottom: 0.1rem solid-grey;
-    display: none;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 15rem;
-    margin-bottom: 1.6rem;
-    padding: 2.4rem;
-  }
-  #mainContent section#categories .cards .card .img-wrapper {
-    padding-right: 1rem;
-  }
-  #mainContent section#categories .cards .card .img-wrapper img {
-    width: 15rem;
-    display: block;
-    border-radius: 1rem;
-  }
-  #mainContent section#categories .cards .card span {
-    padding-left: 1rem;
-    font-size: 1.2rem;
-    letter-spacing: 0.1rem;
-    font-weight: bold;
-  }
-  #mainContent section#categories .cards .defaultCard {
-    display: flex;
   }
 }
 @media screen and (max-width:1000px) {
@@ -865,19 +834,39 @@ main#mainContent.about {
     width: 100%;
     margin: 0;
   }
-  #mainContent section#hero .hero-wrapper .hero-background {
+  main#mainContent section#hero .hero-wrapper .hero-background {
     height: 60vh;
   }
-  #mainContent section#hero .hero-title .hero-h1 {
-    font-size: 3rem;
-    top: 50vh;
+  main#mainContent section#hero div#title.hero-cta {
+    top: 25rem;
   }
-  #mainContent section#signup .signup-wrapper .signup-background {
+  main#mainContent section#hero div#title.hero-cta .hero-h1 {
+    font-size: 4rem;
+  }
+  main#mainContent section#signup .signup-wrapper .signup-background {
     height: 100vh;
   }
-  #mainContent section#signup .signup-title {
+  main#mainContent section#signup .signup-title {
     width: 90%;
     margin-left: 5%;
     top: 2rem;
+  }
+  main#mainContent section#categories {
+    font-size: 3rem;
+  }
+  main#mainContent section#categories .categories-title-wrapper {
+    font-size: 2.5rem;
+  }
+  main#mainContent section#categories .cats {
+    flex-wrap: wrap;
+  }
+  main#mainContent section#about .about-content {
+    flex-wrap: wrap;
+  }
+  main#mainContent section#about .about-content .about-image img {
+    width: 35rem;
+  }
+  main#mainContent section#about .about-content .about-p {
+    font-size: 3rem;
   }
 }
