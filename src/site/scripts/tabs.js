@@ -52,22 +52,27 @@ cats.forEach(cat => new Cat(cat));
 //     catSlice.setAttribute('class', 'cat');
 // }
 
+var modal = document.getElementById("myModal");
+var img = document.getElementById("myImg");
+
 // const cards = Array.from(document.querySelectorAll('.card'));
 // cards.forEach(card => {
-//             card.addEventListener('click', enhance(card));
+//             card.addEventListener('click', e => {
+//             var modal = document.getElementById("myModal");                
+//             modal.style.display = "block";
+//             var modalImg = e;
+//             });
 
-            // function enhance(card) {
-            //         this.card = card;
-            //         var modal = document.getElementById("myModal");
-            //         var img = document.getElementById("myImg");
-            //         var modalImg = this.card.target.firstElementChild.firstElementChild;
-            //         modal.style.display = "block";
-            //         modalImg.src = this.src;
-            //         var span = document.getElementsByClassName("close")[0];
-            // }
-            //span.onclick = function() {
-            //  modal.style.display = "none";
-            //}
+//         }
+//         )
+
+// var modalImg = this.card.target.firstElementChild.firstElementChild;
+// modal.style.display = "block";
+// modalImg.src = this.src;
+// var span = document.getElementsByClassName("close")[0];
+
+
+
 
             // var modal = document.getElementById("myModal");
             // var img = document.getElementById("myImg");

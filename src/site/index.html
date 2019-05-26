@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +9,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="scripts/tabs.js" async></script>
     <script src="scripts/login.js" async></script>
-    <script type="module" src="scripts/products.js" async></script>
-    <!-- <script src="scripts/carousel.js" async></script>     -->
+    <!-- <script type="module" src="scripts/products.js" async></script> -->
+    <script src="scripts/modal.js" async></script>    
 </head>
 
 <body>
@@ -349,10 +348,12 @@
                         <p>Product Example</p>
                     </div>
                 </div>
-                <div id="myModal" class="modal">
+            </div>
+                <div id="cardModal" class="modal">
                     <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                    <div id="caption"></div>
+                    <div class="modalImgCon">
+                    <img class="modal-content"  id="img01">
+                    </div>
                 </div>
         </section>
         <section id="about">

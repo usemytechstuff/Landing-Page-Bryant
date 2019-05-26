@@ -62,9 +62,6 @@
             }
         }
 
-
-
-
         section#categories {
             font-size: 1.2rem;
 
@@ -72,30 +69,17 @@
                 font-size: 2rem;
                 margin-left: 2%;
             }
+
             .cats {
                 flex-wrap: wrap;
 
                 .cat {
                     flex-wrap: wrap;
-                    align-items: center;
-                    flex-direction: column;
-                    margin: 0 .5rem;
-                    padding: 0;
-                    cursor: pointer;
-                    border-radius: 1rem;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
 
                     .img-wrapper {
 
                         >img {
-                            //width: 100%;
                             width: 15rem;
-                            //min-width: 40rem;
-                            display: block;
-                            border-radius: 1rem;
                         }
                     }
 
@@ -104,16 +88,28 @@
 
             .cards {
                 .card {
-                width: auto;
+                    width: auto;
+
                     .img-wrapper {
-                    padding:0;
+                        padding: 0;
+
                         img {
                             width: 15rem;
                         }
                     }
                 }
             }
+
+            div#cardModal {
+                .modalImgCon {
+                    img.modal-content {
+                        max-width: 45rem;
+                    }
+
+                }
+            }
         }
+
         section#about {
             .about-content {
                 flex-wrap: wrap;
@@ -123,15 +119,11 @@
                         width: 20rem;
                     }
                 }
+
                 .about-p {
                     font-size: 2rem;
                 }
             }
         }
-
-
-        }
-
-
-
     }
+}
